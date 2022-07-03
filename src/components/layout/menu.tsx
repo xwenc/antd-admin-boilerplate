@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import { Menu } from "antd";
 import {
   SettingOutlined,
+  AppstoreOutlined,
+  CalendarOutlined,
+  LinkOutlined,
+  KeyOutlined
 } from "@ant-design/icons";
 import type { MenuProps } from "antd/es/menu";
 
@@ -27,6 +31,18 @@ const items: MenuItem[] = [
   getItem("注册", "register", <SettingOutlined />, [
     getItem(<Link to="/personals">个人</Link>, "register-personal"),
     getItem(<Link to="/merchants">商家</Link>, "register-merchant"),
+  ]),
+  getItem("属性", "attributes", <AppstoreOutlined />, [
+    getItem("编辑属性", "attributes-edit"),
+    getItem("分配属性", "attributes-distribute"),
+  ]),
+  getItem("分类", "categories", <CalendarOutlined />),
+  getItem("举报", "reports", <LinkOutlined />, [
+    getItem("举报个人", "report-edit"),
+    getItem("举报商家", "report-distribute"),
+  ]),
+  getItem("权限", "permission", <KeyOutlined />, [
+    getItem("设置权限", "permission-set"),
   ]),
 ];
 
