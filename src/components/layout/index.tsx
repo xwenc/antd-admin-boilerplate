@@ -6,6 +6,8 @@ import { useAuth } from "@contexts/auth.context";
 
 import Sider from "./sider";
 import Header from "./header";
+import Page from "@components/page";
+
 const { Content } = Layout;
 const MyLayout: FC = () => {
   const auth = useAuth();
@@ -24,7 +26,9 @@ const MyLayout: FC = () => {
       <div className={styles.container} style={{ paddingTop: 72 }}>
         <Header {...headerProps} />
         <Content className={styles.content}>
-          <Outlet />
+          <Page>
+            <Outlet />
+          </Page>
         </Content>
       </div>
     </Layout>
@@ -32,16 +36,3 @@ const MyLayout: FC = () => {
 };
 
 export default MyLayout;
-
-// <div>
-//     <h2>Layout page</h2>
-//     <ul>
-//       <li>
-//         <Link to="/personals">Public Page</Link>
-//       </li>
-//       <li>
-//         <Link to="/merchants">Protected Page</Link>
-//       </li>
-//     </ul>
-//     <Outlet />
-//   </div>

@@ -5,8 +5,8 @@ import {
   SettingOutlined,
   AppstoreOutlined,
   CalendarOutlined,
-  LinkOutlined,
-  KeyOutlined
+  TeamOutlined,
+  LockOutlined
 } from "@ant-design/icons";
 import type { MenuProps } from "antd/es/menu";
 
@@ -37,11 +37,11 @@ const items: MenuItem[] = [
     getItem("分配属性", "attributes-distribute"),
   ]),
   getItem("分类", "categories", <CalendarOutlined />),
-  getItem("举报", "reports", <LinkOutlined />, [
+  getItem("举报", "reports", <TeamOutlined />, [
     getItem("举报个人", "report-edit"),
     getItem("举报商家", "report-distribute"),
   ]),
-  getItem("权限", "permission", <KeyOutlined />, [
+  getItem("权限", "permission", <LockOutlined />, [
     getItem("设置权限", "permission-set"),
   ]),
 ];
