@@ -48,6 +48,7 @@ const PersonalPage: FC = () => {
       render: (text: string): React.ReactNode => (
         <div>
           <Dropdown
+            trigger={["click"]}
             overlay={
               <Menu
                 items={[
@@ -60,7 +61,7 @@ const PersonalPage: FC = () => {
           >
             <div>
               <span>{text}</span>
-              <DownOutlined style={{marginLeft: 8}} />
+              <DownOutlined style={{ marginLeft: 8 }} />
             </div>
           </Dropdown>
         </div>

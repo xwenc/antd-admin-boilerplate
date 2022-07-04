@@ -14,7 +14,7 @@ const MerchantPage: FC = () => {
       title: "图片",
       dataIndex: "avatar",
       render: (text: string): React.ReactNode => (
-        <img alt="" src={text} style={{height: 24}} />
+        <img alt="" src={text} style={{ height: 24 }} />
       ),
     },
     {
@@ -56,6 +56,7 @@ const MerchantPage: FC = () => {
       render: (text: string): React.ReactNode => (
         <div>
           <Dropdown
+            trigger={["click"]}
             overlay={
               <Menu
                 items={[
@@ -68,7 +69,7 @@ const MerchantPage: FC = () => {
           >
             <div>
               <span>{text}</span>
-              <DownOutlined style={{marginLeft: 8}} />
+              <DownOutlined style={{ marginLeft: 8 }} />
             </div>
           </Dropdown>
         </div>
